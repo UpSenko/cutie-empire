@@ -576,8 +576,8 @@
   let data = await gprreq.json();
   let gpr = data["approximate_member_count"];
     
-  goal_pr.style = `width:${Math.trunc(((gpr-46)/150)*100)}%`;
-  goal_pr.innerText = `PROGRESS ${Math.floor(((gpr-46)/150)*100)}%`;
+  goal_pr.style = `width:${Math.trunc(((gpr-46)/2000)*100)}%`;
+  goal_pr.innerText = `PROGRESS ${Math.floor(((gpr-46)/2000)*100)}%`;
   goal_pr.style.fontWeight = "bold";
   goal_pr.style.fontSize = "xx-small";
   num.innerText = gpr;

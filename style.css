@@ -37,9 +37,9 @@
   --background-accent: #4f545c;
   --color-primary: #2A2A2A;
   --color-primary-2: #343434;
-  --color-primary-alt: #3F3F3F;
-  --color-secondary: #0049D5;
-  --color-secondary-alt: #0057FF;
+  --color-primary-alt: #525252;
+  --color-secondary: #bfbfbf;
+  --color-secondary-alt: #fff;
 }
 
 html {

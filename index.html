@@ -571,7 +571,7 @@
   let goal_pr = document.getElementById("goal_pr");
   const getprinfo = async () => {
   let gprreq = await fetch(
-    "https://discord.com/api/v9/invites/SQtHBTGcyf?with_counts=true&with_expiration=true"
+    "https://discord.com/api/v9/invites/VkvRkV2VPF?with_counts=true&with_expiration=true"
   );
   let data = await gprreq.json();
   let gpr = data["approximate_member_count"];
@@ -581,7 +581,7 @@
   goal_pr.style.fontWeight = "bold";
   goal_pr.style.fontSize = "xx-small";
   num.innerText = gpr;
-  /// server_icon_url.src = `https://cdn.discordapp.com/icons/1174127797602623539/${data['guild']['icon']}.webp?size=2048`;
+  server_icon_url.src = `https://cdn.discordapp.com/icons/847037056186056714/${data['guild']['icon']}.webp?size=2048`;
 };
   
 getprinfo();

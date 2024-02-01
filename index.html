@@ -14,7 +14,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@CutieEmpire">
     <meta name="twitter:title" content="Cutie Empire | Discord">
-    <meta name="twitter:description" content=" Cuite Empire :3 discover something new #Twitter addition.">
+    <meta name="twitter:description" content=" ">
     <meta property="twitter:image" content="https://cdn.discordapp.com/attachments/1174127798076571658/1202091976497823744/C_logo.png">
     
     <!-- Opengraph Tags -->
@@ -547,10 +547,10 @@
         let gpr = data["approximate_member_count"];
 
         // Calculate progress based on a goal of 150 members
-        let progressPercentage = Math.floor(((gpr - 46) / 150) * 100);
+        let progressPercentage = Math.min(Math.max(((gpr - 46) / 150) * 100, 0), 100);
         
         goal_pr.style.width = `${progressPercentage}%`;
-        goal_pr.innerText = `PROGRESS ${progressPercentage}%`;
+        goal_pr.innerText = `PROGRESS ${progressPercentage.toFixed(2)}%`;
         goal_pr.style.fontWeight = "bold";
         goal_pr.style.fontSize = "xx-small"; // Adjust font size
         num.innerText = gpr;
@@ -563,6 +563,7 @@
     setInterval(getprinfo, 10000);
   });
 </script>
+
 
 <script>
   let num1 = document.getElementById("num2");

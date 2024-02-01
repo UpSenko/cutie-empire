@@ -716,20 +716,29 @@
 
             // Calculate progress based on the ratio of current member count to the goal
             let progressPercentage = (gpr / 150) * 100;
-            goal_pr.style.marginTop = "10px";
+
+            // Apply smooth transition for width changes
+            goal_pr.style.transition = "width 0.5s ease";
+
+            // Update the width and text content with transition
             goal_pr.style.width = `${progressPercentage.toFixed(2)}%`;
             goal_pr.innerText = `PROGRESS ${progressPercentage.toFixed(2)}%`;
             goal_pr.style.fontWeight = "bold";
             goal_pr.style.fontSize = "xx-small"; // Adjust font size
 
             // Dynamically set text color based on background brightness
-            let bgColor = window.getComputedStyle(goal_pr).color;
+            let bgColor = window.getComputedStyle(goal_pr).backgroundColor;
             let brightness = calculateBrightness(bgColor);
 
             // Set text color based on background brightness
+            goal_pr.style.transition = "color 0.5s ease"; // Smooth transition for color changes
             goal_pr.style.color = brightness > 128 ? "#000" : "#fff"; // Set text color based on background brightness
 
             num.innerText = gpr;
+
+            // Remove the transition after first animation
+            goal_pr.removeEventListener("transitionend", removeTransition);
+            goal_pr.addEventListener("transitionend", removeTransition);
          } catch (error) {
             console.error("Error fetching data:", error);
          }
@@ -744,10 +753,16 @@
          return brightness;
       };
 
+      // Function to remove transition
+      const removeTransition = () => {
+         goal_pr.style.transition = "none";
+      };
+
       getprinfo();
       setInterval(getprinfo, 10000);
    });
 </script>
+
 
 
 

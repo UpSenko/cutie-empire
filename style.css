@@ -41,17 +41,20 @@
   --color-secondary: #bfbfbf;
   --color-secondary-alt: #fff;
 
-  background: -webkit-linear-gradient(to left, var(--color-discord), var(--color-pink));
-  background: linear-gradient(to left, var(--color-discord), var(--color-pink));
-  animation: backgroundAnimation 30s linear infinite alternate-reverse;
+  background: 
+    linear-gradient(to left, var(--color-discord), var(--color-pink), var(--color-gray-600));
+  background-size: 200% 100%; /* Expand background size to accommodate more colors */
+  animation: backgroundAnimation 6s ease-in-out infinite alternate;
 }
 
 @keyframes backgroundAnimation {
   0% {
+    background-size: 200% 100%;
     background-position: 0% 0%;
   }
   100% {
-    background-position: 100% 100%;
+    background-size: 300% 100%;
+    background-position: 100% 0%;
   }
 }
 

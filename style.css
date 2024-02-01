@@ -40,6 +40,40 @@
   --color-primary-alt: #525252;
   --color-secondary: #bfbfbf;
   --color-secondary-alt: #fff;
+
+  /* Animation to switch colors every 60 seconds */
+  animation-name: switchColors;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes switchColors {
+  0%, 50% {
+    /* Initial dark theme colors */
+    --background-primary: #15171e;
+    --background-secondary: #262a33;
+    --background-secondary-alt: #15171d;
+    --background-tertiary: #202225;
+    --background-accent: #4f545c;
+    --color-primary: #2A2A2A;
+    --color-primary-2: #343434;
+    --color-primary-alt: #525252;
+    --color-secondary: #bfbfbf;
+    --color-secondary-alt: #fff;
+  }
+  100% {
+    /* Light theme colors */
+    --background-primary: #fff;
+    --background-secondary: #eaeaea;
+    --background-secondary-alt: #fff;
+    --background-tertiary: #f5f5f5;
+    --background-accent: #bdbdbd;
+    --color-primary: #333;
+    --color-primary-2: #666;
+    --color-primary-alt: #999;
+    --color-secondary: #222;
+    --color-secondary-alt: #fff;
+  }
 }
 
 html {

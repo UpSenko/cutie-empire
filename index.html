@@ -536,28 +536,35 @@
   
   
 <script>
-  let num = document.getElementById("num");
-  let server_icon_url = document.getElementById("siu");
-  let goal_pr = document.getElementById("goal_pr");
-  const getprinfo = async () => {
-  let gprreq = await fetch(
-    "https://discord.com/api/v9/invites/2vtSNt5bqA?with_counts=true&with_expiration=true"
-  );
-  let data = await gprreq.json();
-  let gpr = data["approximate_member_count"];
-    
-  goal_pr.style = `width:${Math.trunc(((gpr-46)/150)*100)}%`;
-  goal_pr.innerText = `PROGRESS ${Math.floor(((gpr-46)/150)*100)}%`;
-  goal_pr.style.fontWeight = "bold";
-  goal_pr.style.fontSize = "xx-small";
-  num.innerText = gpr;
-  ///server_icon_url.src = `https://cdn.discordapp.com/icons/847037056186056714/${data['guild']['icon']}.webp?size=2048`;
-};
-  
-getprinfo();
-setInterval(getprinfo, 10000);
-</script>
+  document.addEventListener("DOMContentLoaded", () => {
+    let num = document.getElementById("num");
+    let goal_pr = document.getElementById("goal_pr");
 
+    const getprinfo = async () => {
+      try {
+        let gprreq = await fetch("https://discord.com/api/v9/invites/2vtSNt5bqA?with_counts=true&with_expiration=true");
+        let data = await gprreq.json();
+        let gpr = data["approximate_member_count"];
+
+        let progressPercentage = Math.floor(((gpr - 46) / 150) * 100);
+        goal_pr.style.width = `${progressPercentage}%`;
+        goal_pr.innerText = `PROGRESS ${progressPercentage}%`;
+        goal_pr.style.fontWeight = "bold";
+        goal_pr.style.fontSize = "14px"; // Adjust font size
+        goal_pr.style.color = "#fff"; // Text color
+        goal_pr.style.backgroundColor = "#4CAF50"; // Progress bar color
+        goal_pr.style.borderRadius = "5px"; // Rounded corners
+        goal_pr.style.padding = "5px"; // Padding
+        num.innerText = gpr;
+      } catch (error) {
+        alert("Error fetching data: " + error);
+      }
+    };
+
+    getprinfo();
+    setInterval(getprinfo, 10000);
+  });
+</script>
 
 <script>
   let num1 = document.getElementById("num2");

@@ -716,7 +716,7 @@
 
             // Calculate progress based on the ratio of current member count to the goal
             let progressPercentage = (gpr / 150) * 100;
-
+            goal_pr.style.marginTop = "10px";
             goal_pr.style.width = `${progressPercentage.toFixed(2)}%`;
             goal_pr.innerText = `PROGRESS ${progressPercentage.toFixed(2)}%`;
             goal_pr.style.fontWeight = "bold";

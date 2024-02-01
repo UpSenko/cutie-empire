@@ -723,8 +723,10 @@
             goal_pr.style.fontSize = "xx-small"; // Adjust font size
 
             // Dynamically set text color based on background brightness
-            let bgColor = window.getComputedStyle(goal_pr).backgroundColor;
+            let bgColor = window.getComputedStyle(goal_pr).color;
             let brightness = calculateBrightness(bgColor);
+
+            // Set text color based on background brightness
             goal_pr.style.color = brightness > 128 ? "#000" : "#fff"; // Set text color based on background brightness
 
             num.innerText = gpr;

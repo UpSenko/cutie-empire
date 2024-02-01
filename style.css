@@ -42,9 +42,11 @@
   --color-secondary-alt: #fff;
 
   /* Animation to switch colors every 60 seconds */
+  transition: background-color 1s ease, color 1s ease;
   animation-name: switchColors;
   animation-duration: 60s;
   animation-iteration-count: infinite;
+  
 }
 
 @keyframes switchColors {

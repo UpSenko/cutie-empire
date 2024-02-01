@@ -550,7 +550,7 @@
         let progressPercentage = (gpr / 150) * 100;
 
         goal_pr.style.width = `${progressPercentage.toFixed(2)}%`;
-        goal_pr.innerText = `PROGRESS ${progressPercentage.toFixed(2)}%`;
+        goal_pr.innerText = `PROGRESS ${progressPercentage.toFixed(2)}%`; // Remove the '%' sign here
         goal_pr.style.fontWeight = "bold";
         goal_pr.style.fontSize = "xx-small"; // Adjust font size
         num.innerText = gpr;
@@ -563,6 +563,7 @@
     setInterval(getprinfo, 10000);
   });
 </script>
+
 
 
 <script>

@@ -546,9 +546,9 @@
         let data = await gprreq.json();
         let gpr = data["approximate_member_count"];
 
-        // Calculate progress based on a goal of 150 members
-        let progressPercentage = Math.min(Math.max(((gpr - 46) / 150) * 100, 0), 100);
-        
+        // Calculate progress based on the ratio of current member count to the goal
+        let progressPercentage = (gpr / 150) * 100;
+
         goal_pr.style.width = `${progressPercentage}%`;
         goal_pr.innerText = `PROGRESS ${progressPercentage.toFixed(2)}%`;
         goal_pr.style.fontWeight = "bold";

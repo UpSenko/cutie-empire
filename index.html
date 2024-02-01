@@ -130,7 +130,7 @@
                      <b>150</b> Members</b>
                   </a><br>
                   <div class="zk-light-discord w3-round-xlarge">
-                     <div class="w3-container w3-round-xlarge zk-discord" id="goal_pr"></div>
+                     <div class="w3-container w3-round-xlarge zk-discord" id="goal_pr", style="margin-top: 10px;"></div>
                   </div>
                </li>
             </ul>
@@ -704,33 +704,48 @@
 
 
    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-         let num = document.getElementById("num");
-         let goal_pr = document.getElementById("goal_pr");
+   document.addEventListener("DOMContentLoaded", () => {
+      let num = document.getElementById("num");
+      let goal_pr = document.getElementById("goal_pr");
 
-         const getprinfo = async () => {
-            try {
-               let gprreq = await fetch("https://discord.com/api/v9/invites/2vtSNt5bqA?with_counts=true&with_expiration=true");
-               let data = await gprreq.json();
-               let gpr = data["approximate_member_count"];
+      const getprinfo = async () => {
+         try {
+            let gprreq = await fetch("https://discord.com/api/v9/invites/2vtSNt5bqA?with_counts=true&with_expiration=true");
+            let data = await gprreq.json();
+            let gpr = data["approximate_member_count"];
 
-               // Calculate progress based on the ratio of current member count to the goal
-               let progressPercentage = (gpr / 150) * 100;
+            // Calculate progress based on the ratio of current member count to the goal
+            let progressPercentage = (gpr / 150) * 100;
 
-               goal_pr.style.width = `${progressPercentage.toFixed(2)}%`;
-               goal_pr.innerText = `PROGRESS ${progressPercentage.toFixed(2)}%`; // Remove the '%' sign here
-               goal_pr.style.fontWeight = "bold";
-               goal_pr.style.fontSize = "xx-small"; // Adjust font size
-               num.innerText = gpr;
-            } catch (error) {
-               console.error("Error fetching data:", error);
-            }
-         };
+            goal_pr.style.width = `${progressPercentage.toFixed(2)}%`;
+            goal_pr.innerText = `PROGRESS ${progressPercentage.toFixed(2)}%`;
+            goal_pr.style.fontWeight = "bold";
+            goal_pr.style.fontSize = "xx-small"; // Adjust font size
 
-         getprinfo();
-         setInterval(getprinfo, 10000);
-      });
-   </script>
+            // Dynamically set text color based on background brightness
+            let bgColor = window.getComputedStyle(goal_pr).backgroundColor;
+            let brightness = calculateBrightness(bgColor);
+            goal_pr.style.color = brightness > 128 ? "#000" : "#fff"; // Set text color based on background brightness
+
+            num.innerText = gpr;
+         } catch (error) {
+            console.error("Error fetching data:", error);
+         }
+      };
+
+      // Function to calculate brightness
+      const calculateBrightness = (color) => {
+         let matches = color.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+         let brightness = matches ?
+            (0.2126 * parseInt(matches[1])) + (0.7152 * parseInt(matches[2])) + (0.0722 * parseInt(matches[3])) :
+            null;
+         return brightness;
+      };
+
+      getprinfo();
+      setInterval(getprinfo, 10000);
+   });
+</script>
 
 
 

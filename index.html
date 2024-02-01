@@ -546,18 +546,16 @@
         let data = await gprreq.json();
         let gpr = data["approximate_member_count"];
 
+        // Calculate progress based on a goal of 150 members
         let progressPercentage = Math.floor(((gpr - 46) / 150) * 100);
+        
         goal_pr.style.width = `${progressPercentage}%`;
         goal_pr.innerText = `PROGRESS ${progressPercentage}%`;
         goal_pr.style.fontWeight = "bold";
-        goal_pr.style.fontSize = "14px"; // Adjust font size
-        goal_pr.style.color = "#fff"; // Text color
-        goal_pr.style.backgroundColor = "#4CAF50"; // Progress bar color
-        goal_pr.style.borderRadius = "5px"; // Rounded corners
-        goal_pr.style.padding = "5px"; // Padding
+        goal_pr.style.fontSize = "xx-small"; // Adjust font size
         num.innerText = gpr;
       } catch (error) {
-        alert("Error fetching data: " + error);
+        console.error("Error fetching data:", error);
       }
     };
 

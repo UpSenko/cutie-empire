@@ -41,40 +41,17 @@
   --color-secondary: #bfbfbf;
   --color-secondary-alt: #fff;
 
-  /* Animation to switch colors every 60 seconds */
-  transition: background-color 1s ease, color 1s ease;
-  animation-name: switchColors;
-  animation-duration: 60s;
-  animation-iteration-count: infinite;
-  
+  background: -webkit-linear-gradient(to left, var(--color-discord), var(--color-pink));
+  background: linear-gradient(to left, var(--color-discord), var(--color-pink));
+  animation: backgroundAnimation 30s linear infinite alternate-reverse;
 }
 
-@keyframes switchColors {
-  0%, 50% {
-    /* Initial dark theme colors */
-    --background-primary: #15171e;
-    --background-secondary: #262a33;
-    --background-secondary-alt: #15171d;
-    --background-tertiary: #202225;
-    --background-accent: #4f545c;
-    --color-primary: #2A2A2A;
-    --color-primary-2: #343434;
-    --color-primary-alt: #525252;
-    --color-secondary: #bfbfbf;
-    --color-secondary-alt: #fff;
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 0%;
   }
   100% {
-    /* Light theme colors */
-    --background-primary: #fff;
-    --background-secondary: #eaeaea;
-    --background-secondary-alt: #fff;
-    --background-tertiary: #f5f5f5;
-    --background-accent: #bdbdbd;
-    --color-primary: #333;
-    --color-primary-2: #666;
-    --color-primary-alt: #999;
-    --color-secondary: #222;
-    --color-secondary-alt: #fff;
+    background-position: 100% 100%;
   }
 }
 

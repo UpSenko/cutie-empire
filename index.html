@@ -722,11 +722,6 @@
             goal_pr.innerText = `PROGRESS ${progressPercentage.toFixed(2)}%`;
             goal_pr.style.fontWeight = "bold";
             goal_pr.style.fontSize = "xx-small"; // Adjust font size
-
-            // Dynamically set text color based on background brightness
-            let bgColor = window.getComputedStyle(goal_pr).backgroundColor;
-            let brightness = calculateBrightness(bgColor);
-
   
             num.innerText = gpr;
 

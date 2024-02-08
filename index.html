@@ -137,242 +137,429 @@
                 </ul>
 
             </div>
-            <div id="server-rules" role="tabpanel" class="tab-pane fade">
-                <div class="card mb-3">
-                    <div class="card-header">
-                        <h2 class="card-text fs-16"><img src="https://cdn.discordapp.com/emojis/1152606677753925663.png"
-                                style="width:23px;height:23px;color:#FFAC3D"><b> Server Rules</b></h2>
-                    </div>
-                    <div class="card-body">
-                        <div class="rule">
-                            <h3># Age 14+</h3>
-                            <blockquote>
-                                <p>All members must be age 14 or above in this empire.</p>
-                            </blockquote>
-                            <p><strong>Results:</strong> No appeal Perma Banned</p>
-                        </div>
-                        <div class="rule">
-                            <h3># Be Respectful</h3>
-                            <blockquote>
-                                <p>Treat my members and myself with respect. No excuses.</p>
-                            </blockquote>
-                            <p><strong>Results:</strong> Timeout / Ban ... depends on the context</p>
-                        </div>
-                        <div class="rule">
-                            <h3># No Suicidal Motives Period.</h3>
-                            <blockquote>
-                                <p>We are not here to support suicidal topics.</p>
-                            </blockquote>
-                            <p><strong>Results:</strong> Timeout / Kick</p>
-                        </div>
-                        <div class="rule">
-                            <h3># No NSFW</h3>
-                            <blockquote>
-                                <p>Please refrain from sharing or discussing NSFW content here.</p>
-                            </blockquote>
-                            <p><strong>Results:</strong> Ban (no appeal) / Timeout 14 days (2 weeks)</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="col-md-9">
+                <ul class="tabbed-area nav nav-links mb-3" id="server-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="server-info" data-toggle="tab" data-target="#about" role="tab"
+                            href="#server-info"><b>Server Info</b></a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="server-rule" data-toggle="tab" data-target="#server-rules" role="tab"
+                            href="#server-rules"><b>Server Rules</b></a>
+                    </li>
+                    <!--<li class="nav-item" role="presentation">
+               <a class="nav-link" id="serverbot" data-toggle="tab" data-target="#server-bot" role="tab" href="#server-bot"><b>Server Bot</b></a>
+            </li>
+            
+            <li class="nav-item" role="presentation">
+               <a class="nav-link" id="server-event" data-toggle="tab" data-target="#server-events" role="tab" href="#server-event"><b>Events</b></a>
+            </li>-->
 
-
-            <div id="server-bot" role="tabpanel" class="tab-pane fade">
-                <div class="card mb-3">
-                    <div class="card-header">
-                        <h2 class="card-text fs-16"><img src="https://cdn.discordapp.com/emojis/924851929505493092.png"
-                                style="width:29px;height:29px;"><b> Our Server Bot</b></h2>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text fs-16">Our Server Bot have some different features that can probably
-                            help
-                            you and us, so let's take a look on some common things we can do or did using our
-                            NEXO:</p>
-                        <br>&nbsp <img src="https://cdn.discordapp.com/emojis/1064068338914959360.gif?v=1" , alt="Arr"
-                            style="width:20px;height:20px;">
-                        <pr style="color:#ADAEB2" class="card-text fs-16">&nbsp At first we have made a
-                            shinysteal
-                            automod, wonder what's it? let me explain then.. It basically check if any pokémon
-                            spawned in
-                            shinyhunt channels has any shinyhunter or not, If there are then it runs a timer. If
-                            you
-                            catch before the timer and you aren't a shinyhunter then it will punish you with a
-                            timeout!
-                        </pr>
-                    </div>
-                </div>
-
-            </div>
-
-
-            <div id="advanced" role="tabpanel" class="tab-pane fade">
-                <div class="card mb-3">
-                    <div class="card-header">
-                        <h2 class="card-text fs-16"><img src="https://cdn.discordapp.com/emojis/955968303271133225.png"
-                                style="width:23px;height:23px;"><b>Advance Information</b></h2>
-                    </div>
-                    <div class="stats-group row">
-
-                        <div class="col-md-6">
-                            <div class="stat">
-                                <!--<div class="icon"><i class="fa-solid fa-tags"></i></div>-->
-                                <div class="text">
-                                    <div class="h5 fs-16 mb-1"><b>Category</b></div>
-                                    <a class="badge badge-secondary-202 btn-sm">Community Server</a>
-                                </div>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="advanced-tab" data-toggle="tab" data-target="#advanced" role="tab"
+                            href="#advanced-tab"><b>Advanced Info</b></a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="share-tab" data-toggle="tab" data-target="#share" role="tab"
+                            href="#share-tab"><b>Share</b></a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="server-tabContent">
+                    <div id="about" role="tabpanel" class="tab-pane fade show active">
+                        <div class="card mb-3 b-0">
+                            <div class="card-header">
+                                <h2 class="card-text fs-16"><img
+                                        src="https://cdn.discordapp.com/emojis/1130035297921540148.png"
+                                        style="width:23px;height:23px;color:#FFAC3D"><b> Our Server</b></h2>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text fs-16">Relax because we are glad to extend an owosome welcome to
+                                    you. Here
+                                    in Cuite Empire, every moment is crafted to perfection just for you.</p>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="stat">
-                                <!--  <div class="icon"><i class="fa-solid fa-face-zany"></i></div>-->
-                                <div class="text">
-                                    <div class="h5 fs-16 mb-1"><b>NSFW</b></div>
-                                    <a class="badge badge-secondary-202 btn-sm" style="color:#ffffff;">No</a>
-                                </div>
+                    </div>
+                    <div id="server-rules" role="tabpanel" class="tab-pane fade">
+                        <div class="card mb-3">
+                            <div class="card-header">
+                                <h2 class="card-text fs-16"><img
+                                        src="https://cdn.discordapp.com/emojis/1152606677753925663.png"
+                                        style="width:23px;height:23px;color:#FFAC3D"><b> Server Rules</b></h2>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text fs-16" style="color:#ADAEB2"><b>Please take a moment to look through
+                                        our
+                                        server rules.<br>The Rules provided below contain full information about each
+                                        rule...</b>
+                                </p>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="stat">
-                                <!-- <div class="icon"><i class="fa-solid fa-earth-europe"></i></div>-->
-                                <div class="text">
-                                    <div class="h5 fs-16 mb-1"><b>Language</b></div>
-                                    <a class="badge badge-secondary-202 btn-sm" style="color:#ffffff;">English</a>
+                        <div class="faq-item card">
+                            <div class="card-body pt-3 pb-1 b-0">
+                                <div class="faq-link" data-toggle="collapse" href="#maintain-behavior" role="button"
+                                    aria-expanded="false" aria-controls="multiCollapseExample1">
+                                    <h3 class="fs-16 mt-0 float-left">
+                                        <pr style="color:#ADAEB2" class="card-text fs-16"><b>Basic Rules</b></pr>
+                                    </h3>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="stat">
-                                <!-- <div class="icon"><i class="fa-solid fa-id-badge"></i></div>-->
-                                <div class="text">
-                                    <div class="h5 fs-16 mb-1"><b>Server ID</b></div>
-                                    <a class="badge badge-secondary-202 btn-sm"
-                                        style="color:#ffffff;">1174127797602623539</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="stat">
-                                <!-- <div class="icon"><i class="fa-solid fa-fire"></i></div>-->
-                                <div class="text">
-                                    <div class="h5 fs-16 mb-1"><b>Regular Events</b></div>
-                                    <a class="badge badge-secondary-202 btn-sm" style="color:#ffffff;">No</a>
+                                <div class="collapse multi-collapse" id="maintain-behavior">
+                                    <p class="pb-3 fs-16"><code class="ml-1">01.</code> Rules apply everywhere in the
+                                        server at
+                                        all times. All rules include but are not limited to their meaning and
+                                        understanding.
+                                        Ignoring or not reading these rules does not make you immune to them. Not all
+                                        rules are
+                                        listed here, so please use some common sense, and don't do something which make
+                                        us take
+                                        any action against you.<br><br>
+                                        <code class="ml-1">02.</code> The Discord Terms of Service
+                                        (https://discord.com/terms) and
+                                        Guidelines (https://discord.com/guidelines) will always apply.<br><br>
+                                        <code class="ml-1">03.</code> No Punishment Evasion. Users should not attempt to
+                                        evade the
+                                        consequences of their actions by any means, including but not limited to: using
+                                        alts
+                                        (alternative accounts), leaving/re-joining the server, lying, etc.<br><br>
+                                        <code class="ml-1">04.</code> Please take a moment to read all rules to keep
+                                        yourself
+                                        safe.
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-md-12">
-                            <div class="stat">
-                                <!-- <div class="icon"><i class="fa-solid fa-tags"></i></div>-->
-                                <div class="text">
-                                    <div class="h5 fs-16 mb-1"><b>Server Tags</b></div>
-                                    <a class="badge badge-secondary-202 btn-sm" style="color:#ffffff;">Anime</a>
-                                    <a class="badge badge-secondary-202 btn-sm" style="color:#ffffff;">Chill</a>
-                                    <a class="badge badge-secondary-202 btn-sm" style="color:#ffffff;">Simple</a> <a
-                                        class="badge badge-secondary-202 btn-sm" style="color:#ffffff;">Social</a>
+                        <div class="faq-item card mt-2">
+                            <div class="card-body pt-3 pb-1 b-0">
+                                <div class="faq-link" data-toggle="collapse" href="#respect" role="button"
+                                    aria-expanded="false" aria-controls="multiCollapseExample1">
+                                    <h3 class="fs-16 mt-0 float-left">
+                                        <pr style="color:#ADAEB2" class="card-text fs-16"><b><code
+                                                    class="ml-1">01.</code> Respect
+                                                Everyone</b></pr>
+                                    </h3>
+                                </div>
+                                <div class="collapse multi-collapse" id="respect">
+                                    <p class="pb-3 fs-16"><code class="ml-1">1.1</code> Don't be toxic —<br>Witch
+                                        hunting,
+                                        discrimination, sexism or racism will not be tolerated. Respect our server
+                                        staff, members
+                                        and our helpers; do not be toxic towards anyone in the server. Remember that
+                                        everyone is
+                                        human, just like you. Be considerate to all members, and do not attempt to troll
+                                        or raid -
+                                        these activities can result in strict consequences against you.<br><br>
+                                        <code class="ml-1">1.2</code> Respect everyone's privacy —<br>Do not invade
+                                        anyone's
+                                        privacy. Hence, ALL forms of doxxing (leaking sensitive info without prior
+                                        consent) or
+                                        other attempts to undermine the character of any party are strictly prohibited.
+                                        This also
+                                        means that do cannot try to force anyone into giving their info by the use of IP
+                                        grabbers
+                                        or any other similar means. This also includes genders; don't force anyone to
+                                        tell what
+                                        their gender is if they don't want to tell, we all are human.<br><br>
+                                        <code class="ml-1">1.3</code> Respect everyone's safety —<br>Harmful files or
+                                        links are
+                                        not allowed, even as a joke. Do not attempt trick people in something that could
+                                        be unsafe
+                                        for them.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item card mt-2">
+                            <div class="card-body pt-3 pb-1 b-0">
+                                <div class="faq-link" data-toggle="collapse" href="#no-nsfw" role="button"
+                                    aria-expanded="false" aria-controls="multiCollapseExample1">
+                                    <h3 class="fs-16 mt-0 float-left">
+                                        <pr style="color:#ADAEB2" class="card-text fs-16"><b><code
+                                                    class="ml-1">02.</code> No
+                                                NSFW/ NSFL</b></pr>
+                                    </h3>
+                                </div>
+                                <div class="collapse multi-collapse" id="no-nsfw">
+                                    <p class="pb-3 fs-16"><code class="ml-1">2.1</code> Absolutely no NSFW or NSFL
+                                        content will
+                                        be tolerated. This includes NSFW in form of text, images, GIFs, links, emotes or
+                                        anything
+                                        similar. Adult jokes or any reference to NSFW is not allowed.</p>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="faq-item card mt-2">
+                            <div class="card-body pt-3 pb-1 b-0">
+                                <div class="faq-link" data-toggle="collapse" href="#profile-rule" role="button"
+                                    aria-expanded="false" aria-controls="multiCollapseExample1">
+                                    <h3 class="fs-16 mt-0 float-left">
+                                        <pr style="color:#ADAEB2" class="card-text fs-16"><b><code
+                                                    class="ml-1">04.</code> Profile
+                                                Rules</b></pr>
+                                    </h3>
+                                </div>
+                                <div class="collapse multi-collapse" id="profile-rule">
+                                    <p class="pb-3 fs-16"><code class="ml-1">4.1</code> Your profile picture and display
+                                        name
+                                        should also be in accordance with the server rules. This means any inappropriate
+                                        profile
+                                        pictures or display names are prohibited.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="faq-item card mt-2">
+                            <div class="card-body pt-3 pb-1 b-0">
+                                <div class="faq-link" data-toggle="collapse" href="#text-rule" role="button"
+                                    aria-expanded="false" aria-controls="multiCollapseExample1">
+                                    <h3 class="fs-16 mt-0 float-left">
+                                        <pr style="color:#ADAEB2" class="card-text fs-16"><b><code
+                                                    class="ml-1">05.</code> Text
+                                                Channel Rules</b></pr>
+                                    </h3>
+                                </div>
+                                <div class="collapse multi-collapse" id="text-rule">
+                                    <p class="pb-3 fs-16"><code class="ml-1">5.1</code> Do not discuss
+                                        offensive/controversial
+                                        materials. This includes topics such as politics, religion, acts of violence,
+                                        suicide/self-harm, school shootings, and other serious topics; as well as racial
+                                        slurs,
+                                        sexist or homophobic statements, and any kind of discrimination.<br><br>
+                                        <code class="ml-1">5.2</code> Don't spam within channels, this can
+                                        mean:<br>&nbsp - Chat
+                                        Flood: Typing separate lines very quickly<br>&nbsp - Wall Text: Typing out large
+                                        blocks of
+                                        text<br>&nbsp - Repetitive Messages: Posting the same images/emojis/message
+                                        multiple
+                                        times<br>&nbsp - Epileptic Emotes: Posting/reacting with flashy GIFs or
+                                        Emotes<br><br>
+                                        <code class="ml-1">5.3</code> Stay on topic —<br>Read the channel
+                                        topics/description to
+                                        understand what you can/cannot do in the channel. Bot commands should be used in
+                                        their
+                                        respective channels. If commands are related to the topic they can be used as
+                                        long as they
+                                        aren't being spammed.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+                    <div id="server-bot" role="tabpanel" class="tab-pane fade">
+                        <div class="card mb-3">
+                            <div class="card-header">
+                                <h2 class="card-text fs-16"><img
+                                        src="https://cdn.discordapp.com/emojis/924851929505493092.png"
+                                        style="width:29px;height:29px;"><b> Our Server Bot</b></h2>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text fs-16">Our Server Bot have some different features that can probably
+                                    help
+                                    you and us, so let's take a look on some common things we can do or did using our
+                                    NEXO:</p>
+                                <br>&nbsp <img src="https://cdn.discordapp.com/emojis/1064068338914959360.gif?v=1" ,
+                                    alt="Arr" style="width:20px;height:20px;">
+                                <pr style="color:#ADAEB2" class="card-text fs-16">&nbsp At first we have made a
+                                    shinysteal
+                                    automod, wonder what's it? let me explain then.. It basically check if any pokémon
+                                    spawned in
+                                    shinyhunt channels has any shinyhunter or not, If there are then it runs a timer. If
+                                    you
+                                    catch before the timer and you aren't a shinyhunter then it will punish you with a
+                                    timeout!
+                                </pr>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div id="advanced" role="tabpanel" class="tab-pane fade">
+                        <div class="card mb-3">
+                            <div class="card-header">
+                                <h2 class="card-text fs-16"><img
+                                        src="https://cdn.discordapp.com/emojis/955968303271133225.png"
+                                        style="width:23px;height:23px;"><b>Advance Information</b></h2>
+                            </div>
+                            <div class="stats-group row">
+
+                                <div class="col-md-6">
+                                    <div class="stat">
+                                        <!--<div class="icon"><i class="fa-solid fa-tags"></i></div>-->
+                                        <div class="text">
+                                            <div class="h5 fs-16 mb-1"><b>Category</b></div>
+                                            <a class="badge badge-secondary-202 btn-sm">Community Server</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="stat">
+                                        <!--  <div class="icon"><i class="fa-solid fa-face-zany"></i></div>-->
+                                        <div class="text">
+                                            <div class="h5 fs-16 mb-1"><b>NSFW</b></div>
+                                            <a class="badge badge-secondary-202 btn-sm" style="color:#ffffff;">No</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="stat">
+                                        <!-- <div class="icon"><i class="fa-solid fa-earth-europe"></i></div>-->
+                                        <div class="text">
+                                            <div class="h5 fs-16 mb-1"><b>Language</b></div>
+                                            <a class="badge badge-secondary-202 btn-sm"
+                                                style="color:#ffffff;">English</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="stat">
+                                        <!-- <div class="icon"><i class="fa-solid fa-id-badge"></i></div>-->
+                                        <div class="text">
+                                            <div class="h5 fs-16 mb-1"><b>Server ID</b></div>
+                                            <a class="badge badge-secondary-202 btn-sm"
+                                                style="color:#ffffff;">1174127797602623539</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="stat">
+                                        <!-- <div class="icon"><i class="fa-solid fa-fire"></i></div>-->
+                                        <div class="text">
+                                            <div class="h5 fs-16 mb-1"><b>Regular Events</b></div>
+                                            <a class="badge badge-secondary-202 btn-sm" style="color:#ffffff;">No</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="stat">
+                                        <!-- <div class="icon"><i class="fa-solid fa-tags"></i></div>-->
+                                        <div class="text">
+                                            <div class="h5 fs-16 mb-1"><b>Server Tags</b></div>
+                                            <a class="badge badge-secondary-202 btn-sm" style="color:#ffffff;">Anime</a>
+                                            <a class="badge badge-secondary-202 btn-sm" style="color:#ffffff;">Chill</a>
+                                            <a class="badge badge-secondary-202 btn-sm"
+                                                style="color:#ffffff;">Simple</a> <a
+                                                class="badge badge-secondary-202 btn-sm"
+                                                style="color:#ffffff;">Social</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div id="share" role="tabpanel" class="tab-pane fade">
-                <div class="card mb-3">
-                    <div class="card-header">
-                        <h2 class="card-text fs-16"><img src="https://cdn.discordapp.com/emojis/945226638889721886.png"
-                                style="width:23px;height:23px;"><b> Share Our Server</b></h2>
-                    </div>
-                    <div class="card-body">
-                        <p class="mb-4 fs-16">Share this server on social media, to friends, or on your website
-                            or blog!
-                        </p>
-                        <div class="form-group">
-                            <label>Direct Link</label>
-                            <input type="text" class="form-control" aria-label="website" name="website"
-                                value="https://discord.gg/VkvRkV2VPF">
-                        </div>
-                        <div class="form-group">
-                            <label>Markdown</label>
-                            <input type="text" class="form-control" aria-label="website" name="website"
-                                value="[Check our server on Discord!](https://discord.gg/VkvRkV2VPF)">
-                        </div>
-                        <div class="form-group">
-                            <label>HTML</label>
-                            <input type="text" class="form-control" aria-label="website" name="website"
-                                value='<a href="https://discord.gg/VkvRkV2VPF">Check our server on Discord!</a>'>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="server-events" role="tabpanel" class="tab-pane fade">
-                <div class="card mb-3">
-                    <div class="card-header">
-                        <h2 class="card-text fs-16"><img src="https://cdn.discordapp.com/emojis/964251928089493544.png"
-                                style="width:23px;height:23px;"><b> Server Events</b></h2>
-                    </div>
-                    <div class="card-body text-center">
-                        <p class="fs-16">There's currently no event running on our server.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="mt-4 mb-4">
-                <div class="d-flex align-items-center pt-0 mt-4 pb-3 my-2 section-head">
-                    <div class="lh-100">
-                        <div class="mb-0 lh-100 h6"><b>Some Questions about us</b></div>
-                    </div>
-                    <div class="ml-auto p-2">
-                    </div>
-                </div>
-                <div class="faq-item card">
-                    <div class="card-body pt-3 pb-1 b-0">
-                        <div class="faq-link" data-toggle="collapse" href="#about-server-2" role="button"
-                            aria-expanded="false" aria-controls="multiCollapseExample1">
-                            <h3 class="fs-16 mt-0 float-left"><b>Whats to do in Cutie Empire?</b></h3>
-                        </div>
-                        <div class="collapse multi-collapse" id="about-server-2">
-                            <p class="pb-3 fs-16">At Cutie Empire, we offer a variety of APIs and utilities
-                                designed to
-                                enhance your social experience with fellow members.</p>
+                    <div id="share" role="tabpanel" class="tab-pane fade">
+                        <div class="card mb-3">
+                            <div class="card-header">
+                                <h2 class="card-text fs-16"><img
+                                        src="https://cdn.discordapp.com/emojis/945226638889721886.png"
+                                        style="width:23px;height:23px;"><b> Share Our Server</b></h2>
+                            </div>
+                            <div class="card-body">
+                                <p class="mb-4 fs-16">Share this server on social media, to friends, or on your website
+                                    or blog!
+                                </p>
+                                <div class="form-group">
+                                    <label>Direct Link</label>
+                                    <input type="text" class="form-control" aria-label="website" name="website"
+                                        value="https://discord.gg/VkvRkV2VPF">
+                                </div>
+                                <div class="form-group">
+                                    <label>Markdown</label>
+                                    <input type="text" class="form-control" aria-label="website" name="website"
+                                        value="[Check our server on Discord!](https://discord.gg/VkvRkV2VPF)">
+                                </div>
+                                <div class="form-group">
+                                    <label>HTML</label>
+                                    <input type="text" class="form-control" aria-label="website" name="website"
+                                        value='<a href="https://discord.gg/VkvRkV2VPF">Check our server on Discord!</a>'>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="faq-item card mt-2">
-                    <div class="card-body pt-3 pb-1 b-0">
-                        <div class="faq-link" data-toggle="collapse" href="#howdifferentevents" role="button"
-                            aria-expanded="false" aria-controls="multiCollapseExample1">
-                            <h3 class="fs-16 mt-0 float-left"><b>What makes us diffrent?</b></h3>
+                    <div id="server-events" role="tabpanel" class="tab-pane fade">
+                        <div class="card mb-3">
+                            <div class="card-header">
+                                <h2 class="card-text fs-16"><img
+                                        src="https://cdn.discordapp.com/emojis/964251928089493544.png"
+                                        style="width:23px;height:23px;"><b> Server Events</b></h2>
+                            </div>
+                            <div class="card-body text-center">
+                                <p class="fs-16">There's currently no event running on our server.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 mb-4">
+                        <div class="d-flex align-items-center pt-0 mt-4 pb-3 my-2 section-head">
+                            <div class="lh-100">
+                                <div class="mb-0 lh-100 h6"><b>Some Questions about us</b></div>
+                            </div>
+                            <div class="ml-auto p-2">
+                            </div>
+                        </div>
+                        <div class="faq-item card">
+                            <div class="card-body pt-3 pb-1 b-0">
+                                <div class="faq-link" data-toggle="collapse" href="#about-server-2" role="button"
+                                    aria-expanded="false" aria-controls="multiCollapseExample1">
+                                    <h3 class="fs-16 mt-0 float-left"><b>Whats to do in Cutie Empire?</b></h3>
+                                </div>
+                                <div class="collapse multi-collapse" id="about-server-2">
+                                    <p class="pb-3 fs-16">At Cutie Empire, we offer a variety of APIs and utilities
+                                        designed to
+                                        enhance your social experience with fellow members.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item card mt-2">
+                            <div class="card-body pt-3 pb-1 b-0">
+                                <div class="faq-link" data-toggle="collapse" href="#howdifferentevents" role="button"
+                                    aria-expanded="false" aria-controls="multiCollapseExample1">
+                                    <h3 class="fs-16 mt-0 float-left"><b>What makes us diffrent?</b></h3>
 
-                            <!--<i class="fa-solid fa-arrow-right-long float-right"></i>-->
+                                    <!--<i class="fa-solid fa-arrow-right-long float-right"></i>-->
+                                </div>
+                                <div class="collapse multi-collapse" id="howdifferentevents">
+                                    <p class="pb-3 fs-16">Our server doesn't encourage events, instead we create a chill
+                                        and
+                                        casual environment. The simple things are the greatest changes.<br><code
+                                            class="ml-1">discord.gg/2vtSNt5bqA</code></p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="collapse multi-collapse" id="howdifferentevents">
-                            <p class="pb-3 fs-16">Our server doesn't encourage events, instead we create a chill
-                                and
-                                casual environment. The simple things are the greatest changes.<br><code
-                                    class="ml-1">discord.gg/2vtSNt5bqA</code></p>
-                        </div>
-                    </div>
-                </div>
 
 
-                <div class="faq-item card mt-2">
-                    <div class="card-body pt-3 pb-1 b-0">
-                        <div class="faq-link" data-toggle="collapse" href="#how-to-be-staff" role="button"
-                            aria-expanded="false" aria-controls="multiCollapseExample1">
-                            <h3 class="fs-16 mt-0 float-left"><b>Can I apply for staff?</b></h3>
-                            <i class="fa-solid fa-arrow-right-long float-right"></i>
-                        </div>
-                        <div class="collapse multi-collapse" id="how-to-be-staff">
-                            <p class="pb-3 fs-16">Right now, we're pretty picky about who we hire for staff.
-                                Only a few
-                                meet our standards. Our server likes to keep things easy and comfy. We don't lay
-                                down
-                                rules unless we really have to.</p>
+                        <div class="faq-item card mt-2">
+                            <div class="card-body pt-3 pb-1 b-0">
+                                <div class="faq-link" data-toggle="collapse" href="#how-to-be-staff" role="button"
+                                    aria-expanded="false" aria-controls="multiCollapseExample1">
+                                    <h3 class="fs-16 mt-0 float-left"><b>Can I apply for staff?</b></h3>
+                                    <i class="fa-solid fa-arrow-right-long float-right"></i>
+                                </div>
+                                <div class="collapse multi-collapse" id="how-to-be-staff">
+                                    <p class="pb-3 fs-16">Right now, we're pretty picky about who we hire for staff.
+                                        Only a few
+                                        meet our standards. Our server likes to keep things easy and comfy. We don't lay
+                                        down
+                                        rules unless we really have to.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
     </div>
     <div class="bt-1">
         <div class="container pt-4 pb-4">
@@ -551,7 +738,7 @@
             </div>
             <hr>
             <small>
-                <marquee> • This webite is only about our Discord server.<br> • This website is in no way affiliated
+                <marquee> • This website is only about our Discord server.<br> • This website is in no way affiliated
                     with
                     Discord.
             </small></marquee>

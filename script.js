@@ -146,44 +146,77 @@ document.addEventListener("DOMContentLoaded", function () {
         const mainContent = document.querySelector('.main-content');
         const descriptionContainer = document.createElement('div');
         descriptionContainer.classList.add('description-container');
-        descriptionContainer.style.padding = '20px'; // Add padding around the content
+        descriptionContainer.style.padding = '50px'; // Add padding around the content
         descriptionContainer.style.borderRadius = '10px'; // Add rounded corners
         descriptionContainer.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)'; // Add box shadow
         descriptionContainer.style.marginTop = '20px'; // Add margin top to separate from the header
         descriptionContainer.style.display = 'flex'; // Use flexbox for layout
         descriptionContainer.style.alignItems = 'center'; // Align items vertically
+        descriptionContainer.style.flexDirection = 'column'; // Arrange items vertically
+        
 
         const serverIcon = document.createElement('img');
         serverIcon.src = serverIconUrl;
         serverIcon.alt = 'Server Icon';
         serverIcon.classList.add('server-icon'); // Add class for styling
-        serverIcon.style.marginRight = '10px'; // Add margin right to the server icon
+        serverIcon.style.marginBottom = '20px'; // Add margin bottom to the server icon
+        //serverIcon.style.alignSelf = 'flex-start';
+        serverIcon.style.alignSelf = 'center';
+        serverIcon.style.borderRadius = '50%'; // Make the icon round
 
+
+        serverIcon.style.display.flexDirection = 'left';
         const serverDescription = document.createElement('div');
         serverDescription.classList.add('server-description');
-        serverDescription.innerHTML = `
-    <div>
-        <h2>Cutie Empire</h2>
-        <hr>
-        <div>
-            <ul>
-                <li> Safe & Professional Space</li>
-                <li> Communication & Gaming</li>
-                <li> Cozy & Secure Environment</li>
-                <li> Talk, Play, Level Up</li>
-                <li> Explore the Item Shop</li>
-                <li> Play Server Games</li>
-                <li> Meet Server Bot [Bun]</li>
-            </ul>
-        </div>
-        <p>
-            Join us to chat, play games, and make new friends.
-            Explore our community!
-        </p>
-    </div>
-`;
+        serverDescription.style.marginBottom = '20px'; // Adjust the margin as needed
 
-        serverDescription.style.marginBottom = '10px'; // Add margin bottom for spacing
+        serverDescription.innerHTML = `
+        <style>
+        .feature-list, .activity-list {
+            list-style: none;
+            padding-left: 0;
+        }
+    
+        .feature-item, .activity-item {
+            transition: color 0.4s ease;
+            cursor: pointer;
+            margin-bottom: 8px;
+        }
+    
+        .feature-item:hover, .activity-item:hover {
+            color: #ff7f50; /* Lighter color on hover */
+        }
+    
+        .feature-item:hover:hover, .activity-item:hover:hover {
+            color: #ff6347; /* Deeper color after 4s */
+        }
+        </style>
+    
+        <h2>Cutie Empire</h2>
+        <hr style="border-color: #ccc;">
+    
+        <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+            <div style="flex: -1;">
+                <h3>Features</h3>
+                <ul class="feature-list">
+                    <li class="feature-item">Cozy & Comfy</li>
+                    <li class="feature-item">Safe Space & Secure</li>
+                    <li class="feature-item">Explore the Item Shop</li>
+                </ul>
+            </div>
+    
+            <div style="flex: -1; margin-left: 25px;">
+                <h3>Activities</h3>
+                <ul class="activity-list">
+                    <li class="activity-item">Talk to Level Up</li>
+                    <li class="activity-item">Communication & Gaming</li>
+                    <li class="feature-item">Play Server Games => Earn Server Points => Buy From Item Shop</li>
+
+                </ul>
+            </div>
+        </div>
+    
+        `;
 
         const joinButton = document.createElement('a'); // Change to anchor element
         joinButton.classList.add('join-button');
@@ -196,11 +229,17 @@ document.addEventListener("DOMContentLoaded", function () {
         joinButton.style.cursor = 'pointer'; // Change cursor to pointer on hover
         joinButton.target = '_blank'; // Open link in a new tab
         joinButton.style.textDecoration = 'none'; // Remove underline from the button
+        joinButton.style.marginTop = '0';
+        joinButton.style.marginBottom = '20px'; // Adjust the margin as needed
+
+
 
         descriptionContainer.appendChild(serverIcon); // Add server icon to the container
-        descriptionContainer.appendChild(serverDescription);
         descriptionContainer.appendChild(joinButton);
+
+        descriptionContainer.appendChild(serverDescription);
 
         mainContent.appendChild(descriptionContainer);
     }
+
 });

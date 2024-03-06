@@ -13,12 +13,32 @@ document.addEventListener("DOMContentLoaded", function () {
                 const serverIconUrl = `https://cdn.discordapp.com/icons/${serverInfo.guild.id}/${serverInfo.guild.icon}.png`;
                 const memberCount = serverInfo.approximate_member_count;
 
+                // Set website title to server name
+                document.title = serverName;
+
+                // Set website icon to cropped server icon
+                //var image_icon = serverIconUrl
+
+                const link = document.createElement('link');
+                link.type = 'image/svg+xml';
+                link.rel = 'icon';
+                link.href = 'Icons/home_icon.svg';
+                // link.href = image_icon;
+                document.head.appendChild(link);
+
                 displayServerInfo(serverName, serverIconUrl, memberCount);
                 createServerDescription(serverIconUrl, inviteCode, serverName, memberCount); // Pass inviteCode to createServerDescription
                 createMemberStats(memberCount);
 
             })
             .catch(error => console.error('Error fetching server information:', error));
+    }
+    // Function to crop server icon and return the cropped URL
+    function getCroppedServerIconUrl(serverIconUrl) {
+        // Assuming the server icon is square, you can crop it to a smaller size
+        // You can adjust the width and height according to your preference
+        const croppedIconUrl = `${serverIconUrl}?size=64`;
+        return croppedIconUrl;
     }
 
     progressBar.style.textAlign = 'center'; // Center the text horizontally
@@ -141,7 +161,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const serverDescription = document.createElement('div');
         serverDescription.classList.add('server-description');
-        serverDescription.textContent = `Welcome to ${serverName}! Join us to chat, play games, and make new friends. Feel free to explore the channels and engage with other members.`;
+        serverDescription.innerHTML = `
+    <div>
+        <h2>Cutie Empire</h2>
+        <hr>
+        <div>
+            <ul>
+                <li> Safe & Professional Space</li>
+                <li> Communication & Gaming</li>
+                <li> Cozy & Secure Environment</li>
+                <li> Talk, Play, Level Up</li>
+                <li> Explore the Item Shop</li>
+                <li> Play Server Games</li>
+                <li> Meet Server Bot [Bun]</li>
+            </ul>
+        </div>
+        <p>
+            Join us to chat, play games, and make new friends.
+            Explore our community!
+        </p>
+    </div>
+`;
+
         serverDescription.style.marginBottom = '10px'; // Add margin bottom for spacing
 
         const joinButton = document.createElement('a'); // Change to anchor element

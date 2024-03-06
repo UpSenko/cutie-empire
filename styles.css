@@ -1,0 +1,244 @@
+/* Import Google Fonts */
+@import 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap';
+
+/* Define color variables */
+:root {
+    --dk-gray-100: #F3F4F6;
+    --dk-gray-200: #E5E7EB;
+    --dk-gray-300: #D1D5DB;
+    --dk-gray-400: #9CA3AF;
+    --dk-gray-500: #6B7280;
+    --dk-gray-600: #4B5563;
+    --dk-gray-700: #374151;
+    --dk-gray-800: #1F2937;
+    --dk-gray-900: #111827;
+    --dk-dark-bg: #313348;
+    --dk-darker-bg: #2a2b3d;
+    --navbar-bg-color: #6f6486;
+    --sidebar-bg-color: rgba(37, 38, 54, 0.7); /* Transparent sidebar background */
+    --sidebar-hover-bg-color: #252636; /* Sidebar background color on hover */
+    --sidebar-text-color: #fff; /* Text color for sidebar items */
+}
+
+/* General styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--dk-gray-100);
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Header styles */
+.header-container {
+    position: relative;
+}
+
+/* Background image for the header */
+.header-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+    background-image: url('https://i.pinimg.com/originals/de/be/31/debe315bd1a8ee6139ab726c4335c9e6.gif'); /* Add your background image URL */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+/* Sidebar styles */
+.sidebar {
+    background-color: transparent;
+    color: var(--sidebar-text-color);
+    width: var(--sidebar-width);
+    padding: 10px;
+    position: relative;
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+/* Show sidebar on hover */
+.sidebar:hover {
+    background-color: var(--sidebar-hover-bg-color);
+}
+
+.server-icon img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.navigation .nav-option {
+    padding: 10px 0;
+    cursor: pointer;
+    color: var(--dk-gray-300);
+}
+
+.navigation .nav-option:hover,
+.navigation .nav-option.active {
+    color: #fff;
+    font-weight: bold;
+}
+
+.join-button a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #7289da;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.join-button a:hover {
+    background-color: #5f73bc;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Header text styles */
+.header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff; /* Adjust color as needed */
+    text-align: center; /* Center the text */
+}
+
+.description {
+    margin-bottom: 20px;
+}
+
+/* Grid for emojis */
+.emojis-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.emojis-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Home section styles */
+.home-section {
+    background-color: #ffffff; /* Background color for the home section */
+    padding: 20px; /* Padding around the content */
+    border-radius: 10px; /* Rounded corners for the section */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+    margin-top: 20px; /* Margin to separate it from the header */
+}
+
+/* Server info styles */
+.server-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: calc(100% - 40px);
+}
+
+.server-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Styles for the server name container */
+.server-name-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0; /* Change z-index to 0 */
+}
+
+/* Styles for the server name text */
+.server-name {
+    font-size: 28px; /* Increase font size as needed */
+    font-weight: bold;
+    text-align: right;
+    color: rgba(0, 0, 0, 0.8); /* Adjust opacity as needed */
+    /* Add other styling properties as needed */
+}
+
+/* Home section header styles */
+.home-header-container {
+    position: relative;
+}
+
+/* Styles for the header image */
+.header-image {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+    background-image: url('https://media.tenor.com/tisPXi0763wAAAAi/tkthao219-bubududu.gif'); /* Add your background image URL */
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+/* Styles for the server name overlay */
+.home-server-name-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Use a fun and playful font */
+    font-size: 36px; /* Adjust font size as needed */
+    font-weight: bold; /* Make the text bold */
+    color: #fff; /* Set the text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a shadow for depth */
+    animation: bounceText 0.5s ease-in-out infinite alternate; /* Apply animation */
+    transition: color 0.3s ease; /* Add transition for smooth color change */
+}
+
+/* Keyframes for the animation */
+@keyframes bounceText {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    100% { transform: translate(-50%, -55%) scale(1.1); } /* Apply scale for bounce effect */
+}
+
+/* Hover effect to change color and stop animation */
+.home-server-name-overlay:hover {
+    color: transparent; /* Change text color on hover */
+    animation-play-state: paused; /* Pause animation on hover */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+
+.progress-bar-container {
+    width: 100%;
+    height: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: #4caf50;
+    transition: height 0.2s;
+}
+
+.progress-bar-text {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 20px;
+}

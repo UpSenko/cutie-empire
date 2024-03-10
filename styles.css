@@ -117,6 +117,10 @@ body {
     margin-bottom: 20px;
 }
 
+.description-container {
+    
+}
+
 /* Grid for emojis */
 .emojis-grid {
     display: grid;

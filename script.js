@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // link.href = image_icon;
                 document.head.appendChild(link);
 
-                const tags = ['community', 'social', 'pokemon', 'informitave','cute',];
+                const tags = ['community', 'social', 'pokemon', 'informitave', 'cute',];
                 displayServerInfo(serverName, serverIconUrl, memberCount);
                 createServerDescription(serverIconUrl, inviteCode, serverName, memberCount); // Pass inviteCode to createServerDescription
                 displayServerTags(tags); // Pass the tags here
@@ -328,7 +328,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div style="flex: -1;">
                     <h3>Features</h3>
                     <ul class="feature-list">
-                        <li class="feature-item">Cozy & Comfy</li>
+                        <li class="feature-item">Cozy & Comfy Chat</li>
                         <li class="feature-item">Safe Space & Secure</li>
                         <li class="feature-item">Community Server Bot</li>
                     </ul>

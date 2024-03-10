@@ -53,9 +53,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.head.appendChild(link);
 
                 const tags = ['community', 'social', 'pokemon', 'informitave','cute',];
-                displayServerTags(tags); // Pass the tags here
                 displayServerInfo(serverName, serverIconUrl, memberCount);
                 createServerDescription(serverIconUrl, inviteCode, serverName, memberCount); // Pass inviteCode to createServerDescription
+                displayServerTags(tags); // Pass the tags here
                 createMemberStats(memberCount);
 
 
@@ -63,6 +63,12 @@ document.addEventListener("DOMContentLoaded", function () {
             .catch(error => console.error('Error fetching server information:', error));
     }
     function displayServerTags(tags) {
+        const ts = tags.sort((a, b) => a.length - b.length);
+        tags.sort();
+
+
+
+
         const mainContent = document.querySelector('.main-content');
 
         // Create the server tags container
@@ -260,6 +266,7 @@ document.addEventListener("DOMContentLoaded", function () {
             joinButton.classList.add('join-button');
             joinButton.textContent = "Join";
             joinButton.href = `https://discord.gg/${inviteCode}`; // Set href to Discord invite link
+            joinButton.target = "_blank"; // Open Discord invite in new tab
             joinButton.style.padding = '6px 12px'; // Increase padding for better appearance
             joinButton.style.backgroundColor = '#5865F2'; // Use Discord's primary color for consistency
             joinButton.style.color = '#FFFFFF'; // Text color

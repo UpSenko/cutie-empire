@@ -233,13 +233,15 @@ document.addEventListener("DOMContentLoaded", function () {
     function createServerDescription(serverIconUrl, inviteCode, serverName, memberCount) {
         const mainContent = document.querySelector('.main-content');
         const descriptionContainer = document.createElement('div');
-        descriptionContainer.style.backgroundColor = '#ffffff'; // Set background color
-        descriptionContainer.style.padding = '20px'; // Add padding
-        descriptionContainer.style.borderRadius = '10px'; // Add border radius
+        descriptionContainer.classList.add('description-container');
+        descriptionContainer.style.padding = '50px'; // Add padding around the content
+        descriptionContainer.style.borderRadius = '0px'; // Add rounded corners
         descriptionContainer.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)'; // Add box shadow
-        descriptionContainer.style.marginTop = '20px'; // Add margin top
+        descriptionContainer.style.marginTop = '20px'; // Add margin top to separate from the header
         descriptionContainer.style.display = 'flex'; // Use flexbox for layout
-        descriptionContainer.style.flexDirection = 'column'; // Arrange items vertically
+        descriptionContainer.style.alignItems = 'center'; // Align items vertically
+        descriptionContainer.style.marginBottom = '20px'; // Add margin to separate from the next content
+        descriptionContainer.style.justifyContent = 'center'; // Center content horizontally
 
         const serverInfoContainer = document.createElement('div');
         serverInfoContainer.style.display = 'flex'; // Use flexbox for layout

@@ -242,3 +242,28 @@ body {
     text-align: center;
     line-height: 20px;
 }
+
+/* Styles for the server tags container */
+.server-tags-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the tags container */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Styles for the individual tags */
+.tag {
+    padding: 8px 12px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    color: #555;
+    font-weight: bold;
+    cursor: pointer;
+}

@@ -81,6 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Create the tags label
         const tagsLabel = document.createElement('p');
         tagsLabel.textContent = 'Tags:';
+        tagsLabel.style.color = '#000000'; // Set text color
         tagsLabel.classList.add('tags-label');
         tagsLabel.style.fontWeight = 'bold'; // Make the label bold
 

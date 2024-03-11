@@ -1,31 +1,24 @@
-/* Import Google Fonts */
-@import 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap';
+/* Import BetterStack CSS */
+@import url('https://cdn.jsdelivr.net/npm/betterstack/dist/css/betterstack.min.css');
 
 /* Define color variables */
 :root {
-    --dk-gray-100: #F3F4F6;
-    --dk-gray-200: #E5E7EB;
-    --dk-gray-300: #D1D5DB;
-    --dk-gray-400: #9CA3AF;
-    --dk-gray-500: #6B7280;
-    --dk-gray-600: #4B5563;
-    --dk-gray-700: #374151;
-    --dk-gray-800: #1F2937;
-    --dk-gray-900: #111827;
-    --dk-dark-bg: #313348;
-    --dk-darker-bg: #2a2b3d;
-    --navbar-bg-color: #6f6486;
-    --sidebar-bg-color: rgba(37, 38, 54, 0.7); /* Transparent sidebar background */
-    --sidebar-hover-bg-color: #252636; /* Sidebar background color on hover */
-    --sidebar-text-color: #fff; /* Text color for sidebar items */
+    --primary-color: #5865F2; /* Discord's primary color */
+    --accent-color: #7289DA; /* Discord's accent color */
+    --dk-gray-100: #36393f; /* Dark gray background */
+    --dk-gray-200: #2f3136; /* Slightly darker gray background */
+    --dk-gray-300: #2a2b3d; /* Even darker gray background */
+    --dk-gray-400: #252636; /* Darker gray background */
+    --text-color: #fff; /* Text color */
 }
 
 /* General styles */
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', sans-serif; /* Use Inter font */
     margin: 0;
     padding: 0;
-    background-color: var(--dk-gray-100);
+    background-color: var(--dk-gray-100); /* Set dark gray background */
+    color: var(--text-color); /* Set text color */
 }
 
 .container {
@@ -53,8 +46,8 @@ body {
 
 /* Sidebar styles */
 .sidebar {
-    background-color: transparent;
-    color: var(--sidebar-text-color);
+    background-color: var(--dk-gray-300); /* Use darker gray background for sidebar */
+    color: var(--text-color);
     width: var(--sidebar-width);
     padding: 10px;
     position: relative;
@@ -63,7 +56,7 @@ body {
 
 /* Show sidebar on hover */
 .sidebar:hover {
-    background-color: var(--sidebar-hover-bg-color);
+    background-color: var(--dk-gray-400); /* Darken sidebar on hover */
 }
 
 .server-icon img {
@@ -76,7 +69,7 @@ body {
 .navigation .nav-option {
     padding: 10px 0;
     cursor: pointer;
-    color: var(--dk-gray-300);
+    color: var(--dk-gray-400);
 }
 
 .navigation .nav-option:hover,
@@ -88,7 +81,7 @@ body {
 .join-button a {
     display: block;
     padding: 10px 20px;
-    background-color: #7289da;
+    background-color: var(--primary-color); /* Use Discord's primary color for buttons */
     color: #fff;
     text-decoration: none;
     text-align: center;
@@ -96,7 +89,7 @@ body {
 }
 
 .join-button a:hover {
-    background-color: #5f73bc;
+    background-color: var(--accent-color); /* Use Discord's accent color on hover */
 }
 
 .main-content {
@@ -134,7 +127,6 @@ body {
     border-radius: 5px;
 }
 
-
 /* Server info styles */
 .server-info {
     display: flex;
@@ -167,7 +159,7 @@ body {
     font-size: 28px; /* Increase font size as needed */
     font-weight: bold;
     text-align: right;
-    color: rgba(0, 0, 0, 0.8); /* Adjust opacity as needed */
+    color: rgba(255, 255, 255, 0.8); /* Adjust opacity as needed */
     /* Add other styling properties as needed */
 }
 
@@ -204,7 +196,6 @@ body {
     text-decoration: none; /* Remove underline on hover */
 }
 
-
 .progress-bar-container {
     width: 100%;
     height: 20px;
@@ -217,7 +208,7 @@ body {
 .progress-bar {
     width: 0;
     height: 100%;
-    background-color: #4caf50;
+    background-color: var(--accent-color); /* Use Discord's accent color for progress bar */
     transition: height 0.2s;
 }
 
@@ -251,4 +242,167 @@ body {
     color: #555;
     font-weight: bold;
     cursor: pointer;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--dk-gray-200); /* Use slightly darker gray background for footer */
+    padding: 10px 0;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* Join button styles */
+.join-button {
+    padding: 6px 12px;
+    background-color: var(--primary-color); /* Use Discord's primary color for buttons */
+    color: #FFFFFF;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    position: absolute;
+    bottom: -16px;
+    left: calc(50% - 12px);
+    transform: translateX(-50%);
+    transition: background-color 0.4s, border-color 0.4s;
+}
+
+.join-button:hover {
+    background-color: var(--accent-color); /* Use Discord's accent color on hover */
+    border-color: var(--accent-color);
+}
+/* Footer styles */
+.footer {
+    background-color: #f8f9fa;
+    color: #888888;
+    font-size: 12px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+}
+
+/* Server tags styles */
+.server-tags-container {
+    margin-top: 20px;
+}
+
+.tags-label {
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    padding: 8px 12px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    color: #555;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tag:hover {
+    background-color: #ddd;
+    color: #333;
+}
+
+/* Member stats container styles */
+.member-stats-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.progress-bar-container {
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+    height: 20px;
+    width: 0%;
+    background-color: rgba(128, 128, 128, 0.8);
+    border-radius: 10px;
+    position: relative;
+}
+
+.progress-bar-text {
+    color: #ffffff;
+    font-weight: bold;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.member-stats-label {
+    color: #000000;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.goal-label {
+    color: #000000;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: right;
+}
+
+/* Description container styles */
+.description-container {
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.server-icon {
+    border-radius: 50%;
+    margin-right: 20px;
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+}
+
+.server-description {
+    flex: 1;
+}
+
+.feature-list, .activity-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.feature-item, .activity-item {
+    transition: color 0.4s ease;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+.feature-item:hover, .activity-item:hover {
+    color: #ff7f50; /* Lighter color on hover */
+}
+
+.feature-item:hover:hover, .activity-item:hover:hover {
+    color: #ff6347; /* Deeper color after 4s */
 }
